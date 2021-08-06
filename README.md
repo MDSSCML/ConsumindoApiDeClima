@@ -1,8 +1,11 @@
 
-# ConsumindoApiDeClima
+# Consumindo Api De Clima
 
-<!-- badges: start -->
-<!-- badges: end -->
+## Para o correto funcionamento.
 
-The goal of ConsumindoApiDeClima is to ...
+### Framework
+* Bootstrap
+
+### Biblioteca
+* Jquery
 
