@@ -7,13 +7,13 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         clearInfo();
         showWarning('<div class="spinner-border"></div>');
 
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}
+        let url = `//api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}
         &appid=827f97e571a8d94354301445f72e48e4&units=metric&lang=pt_br`;
 
         let results = await fetch(url);
-        
+
         let json = await results.json();
-  
+
         if (json.cod === 200) {
 
             showInfo({
@@ -64,32 +64,32 @@ function clearInfo() {
 function checkInputs(inputs) {
 
     var filled = true;
-    
+
     inputs.forEach(function(input) {
-        
+
       if(input.value === "") {
           filled = false;
       }
-    
+
     });
-    
+
     return filled;
-    
+
   }
-  
+
   var inputs = document.querySelectorAll("input");
   var button = document.querySelector("button");
-  
+
   inputs.forEach(function(input) {
-      
+
     input.addEventListener("keyup", function() {
-  
+
       if(checkInputs(inputs)) {
         button.disabled = false;
       } else {
         button.disabled = true;
       }
-  
+
     });
-  
+
   });
